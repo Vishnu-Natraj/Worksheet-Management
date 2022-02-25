@@ -1,8 +1,8 @@
 // let allUsers = JSON.parse(localStorage.getItem("usersList") || "[]");
 // let teamtask = JSON.parse(localStorage.getItem("teamtaskList") || "[]");
 const uri = "http://localhost:8080/api/alltasks/";
-let worklogs =[];
-let teamtask=[];
+let worklogs = [];
+let teamtask = [];
 // = JSON.parse(localStorage.getItem("workLogList") || "[]");
 var obj;
 
@@ -29,44 +29,44 @@ function getLogs() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      teamtask=JSON.parse(xhttp.responseText);
+      teamtask = JSON.parse(xhttp.responseText);
       // _displayItems(JSON.parse(xhttp.responseText));
       console.log(JSON.parse(xhttp.responseText));
-    
-  // worklogs
 
-  var html = "";
-  for (var i = 0; i < teamtask.length; i++) {
-    html += "<tr>";
-    html +=
-      "<td>" +
-      teamtask[i].taskname +
-      "<td>" +
-      teamtask[i].description +
-      "<td>" +
-      teamtask[i].assigneto +
-      "<td>" +
-      teamtask[i].assignedate +
-      "<td>" +
-      teamtask[i].duedate +
-      "<td>" +
-      teamtask[i].status +
-      "</td>";
-    html += "</tr>";
-  }
-  document.getElementById("logs").innerHTML = html;
-  addOptions();
-  data();
-  document.getElementById("data1").innerHTML = obj.totalTask;
-  document.getElementById("data2").innerHTML = obj.completedTask;
-  document.getElementById("data3").innerHTML = obj.incompletedTask;
-  document.getElementById("data4").innerHTML = obj.taskExceededDueDate;
-  // +"\n"+obj.incompletedTask +obj.taskExceededDueDate
-  myFunction('1');
-}
-};
-xhttp.open("GET", uri, true);
-xhttp.send();
+      // worklogs
+
+      var html = "";
+      for (var i = 0; i < teamtask.length; i++) {
+        html += "<tr>";
+        html +=
+          "<td>" +
+          teamtask[i].taskname +
+          "<td>" +
+          teamtask[i].description +
+          "<td>" +
+          teamtask[i].assigneto +
+          "<td>" +
+          teamtask[i].assignedate +
+          "<td>" +
+          teamtask[i].duedate +
+          "<td>" +
+          teamtask[i].status +
+          "</td>";
+        html += "</tr>";
+      }
+      document.getElementById("logs").innerHTML = html;
+      addOptions();
+      data();
+      document.getElementById("data1").innerHTML = obj.totalTask;
+      document.getElementById("data2").innerHTML = obj.completedTask;
+      document.getElementById("data3").innerHTML = obj.incompletedTask;
+      document.getElementById("data4").innerHTML = obj.taskExceededDueDate;
+      // +"\n"+obj.incompletedTask +obj.taskExceededDueDate
+      myFunction('1');
+    }
+  };
+  xhttp.open("GET", uri, true);
+  xhttp.send();
 }
 
 function addOptions() {
@@ -148,32 +148,32 @@ function Atest() {
 
 function myFunction(curDiv) {
 
- var x = document.getElementById(curDiv);
+  var x = document.getElementById(curDiv);
   if (curDiv === "1") {
-    
+
     document.getElementById("searchBox").style.display = "none";
     document.getElementById("taskSummary").style.display = "none";
     document.getElementById("statusTable").style.display = "block";
   }
-  
+
   if (curDiv === "searchBox") {
-   
+
     document.getElementById("searchBox").style.display = "block";
     document.getElementById("taskSummary").style.display = "none";
     document.getElementById("statusTable").style.display = "block";
   }
   if (curDiv === "taskSummary") {
-    
+
     document.getElementById("searchBox").style.display = "none";
     document.getElementById("taskSummary").style.display = "block";
     document.getElementById("statusTable").style.display = "block";
   }
- 
+
   async function load_home(url) {
     //   alert(e);
     // let url = "manageuser.html";
     content.innerHTML = await (await fetch(url)).text();
   }
-  
+
   Atest();
 }
