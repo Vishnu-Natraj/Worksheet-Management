@@ -12,9 +12,7 @@ Time entries are more useful once you categorize them.
 
 Work Sheet application main menu's and it's functionalities.
 
-![Application flow](https://github.com/baraneetharan/worksheet/blob/main/wsflow1.png?raw=true)
 
-![Application flow](https://github.com/baraneetharan/worksheet/blob/main/wsflow2.png?raw=true)
 
 ## UML Diagram
 
@@ -54,18 +52,6 @@ CREATE TABLE `work_log` (
 
 ```
 
-![DBStructure](https://github.com/baraneetharan/worksheet/blob/52210a600e6df8ea716025d0ca81f08c3235b312/wsDB.JPG?raw=true)
-## Web Interface
-
-![Users](https://github.com/baraneetharan/worksheet/blob/main/manageuser.JPG?raw=true)
-
-![Task](https://github.com/baraneetharan/worksheet/blob/main/ManageTask.JPG?raw=true)
-
-![Log](https://github.com/baraneetharan/worksheet/blob/main/managelog.JPG?raw=true)
-
-![Admin work flow](https://github.com/baraneetharan/worksheet/blob/main/worksheetAdminflow.png?raw=true)
-
-![User work flow](https://github.com/baraneetharan/worksheet/blob/main/worksheetUserflow.png?raw=true)
 
 ## Test Plan
 ### Test Scenarios – Login Page
